@@ -3,9 +3,7 @@ package Math::BaseCalc;
 use strict;
 use Carp;
 use vars qw($VERSION);
-
-# I think I can control this.
-$VERSION = sprintf "%d.%03d", q$Revision: 1.9 $ =~ /: (\d+).(\d+)/;
+$VERSION = '1.011';
 
 sub new {
   my ($pack, %opts) = @_;
@@ -59,7 +57,7 @@ sub from_base {
     $add_in = $self->from_base(reverse $1)/$dignum**length($1);
   }
   
-  my $str = reverse $str;
+  $str = reverse $str;
   my $result = 0;
   while (length $str) {
     # For large numbers, force result to be an integer (not a float)
@@ -80,6 +78,7 @@ sub to_base {
   while ($num>0) {
     substr($result,0,0) = $self->{digits}[ $num % $dignum ];
     $num = int ($num/$dignum);
+    #$num = (($num - ($num % $dignum))/$dignum);  # An alternative to the above
   }
   return length $result ? $result : $self->{digits}[0];
 }
@@ -137,8 +136,8 @@ Perl functions.
 =item * new Math::BaseCalc(digits=>...)
 
 Create a new base calculator.  You may specify the digit set to use,
-by either giving the digits in an array reference (in increasing order,
-with the 'zero' character first in the array) or by specifying the name
+by either giving the digits in a list reference (in increasing order,
+with the 'zero' character first in the list) or by specifying the name
 of one of the predefined digit sets (see the digit() method below).
 
 =item * $calc->to_base(NUMBER)
@@ -158,7 +157,7 @@ $calc's digit set is currently undefined.
 
 Get/set the current digit set of the calculator.  With no arguments,
 simply returns a list of the characters that make up the current digit
-set.  To change the current digit set, pass an array reference
+set.  To change the current digit set, pass a list reference
 containing the new digits, or the name of a predefined digit set.
 Currently the predefined digit sets are:
 
