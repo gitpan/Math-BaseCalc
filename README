@@ -5,7 +5,7 @@ SYNOPSIS
       use Math::BaseCalc;
 
       my $calc = new Math::BaseCalc(digits => [0,1]); #Binary
-      my $bin_string = $calc->to_base(65); # Convert 465 to binary
+      my $bin_string = $calc->to_base(465); # Convert 465 to binary
 
       $calc->digits('oct'); # Octal
       my $number = $calc->from_base('1574'); # Convert octal 1574 to decimal
@@ -24,7 +24,7 @@ DESCRIPTION
     first converting to a Perl number, then to the desired base for the
     result:
 
-     $calc7  = new Math::BaseCalc(digits=>[0..7]);
+     $calc7  = new Math::BaseCalc(digits=>[0..6]);
      $calc36 = new Math::BaseCalc(digits=>[0..9,'a'..'z'];
      
      $in_base_36 = $calc36->to_base( $calc7->from_base('3506') );
@@ -44,13 +44,12 @@ METHODS
 
     * $calc->to_base(NUMBER)
         Converts a number to a string representing that number in the
-        associated base. Currently only handles integers.
+        associated base.
 
     * $calc->from_base(STRING)
         Converts a string representing a number in the associated base to a
-        Perl integer. Currently only handles integers. The behavior when fed
-        strings with characters not in $calc's digit set is currently
-        undefined.
+        Perl integer. The behavior when fed strings with characters not in
+        $calc's digit set is currently undefined.
 
     * $calc->digits
     * $calc->digits(...)
