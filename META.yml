@@ -1,21 +1,24 @@
 ---
-name: Math-BaseCalc
-version: 1.013
+abstract: 'Convert numbers between various bases'
 author:
-  - 'Ken Williams, ken@forum.swarthmore.edu'
-abstract: Convert numbers between various bases
-license: perl
-resources:
-  homepage: http://code.google.com/p/perl-math-basecalc
-  license: http://dev.perl.org/licenses/
-  repository: http://perl-math-basecalc.googlecode.com/svn
+  - 'Ken Williams <kwilliams@cpan.org>'
 build_requires:
+  Module::Build: 0.3601
   Test::More: 0
-provides:
-  Math::BaseCalc:
-    file: lib/Math/BaseCalc.pm
-    version: 1.013
-generated_by: Module::Build version 0.2808
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200000, CPAN::Meta::Converter version 2.102400'
+license: perl
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Math-BaseCalc
+requires:
+  Carp: 0
+  vars: 0
+resources:
+  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Math-BaseCalc
+  repository: http://perl-math-basecalc.googlecode.com/svn/trunk
+version: 1.014

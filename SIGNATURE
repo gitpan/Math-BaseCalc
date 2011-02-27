@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.55.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,19 +14,23 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 b93bfc33c863133c1d7be41d3de91ee709cd1d1d Build.PL
-SHA1 a42372acb34344dc002e1c90bb0bc6d8e1792fc1 Changes
-SHA1 90fc65867cc3b1cfabc3202a74e87100b9f04a9b MANIFEST
-SHA1 7edffe7a90e341554dc205f9472727bafdfd9a16 META.yml
-SHA1 32e465cf7c76056a5a766c90cb65afbbc7e44d00 Makefile.PL
-SHA1 8132ad35e17ffb205bd21b44d8a1d0e381db6682 README
-SHA1 d52eb28df40a20142c751fe9491f9c3b51fe21fd lib/Math/BaseCalc.pm
-SHA1 1a48a108576bb40b8591b0c32a532390c2e95fa2 t/01_basic_tests.t
+SHA1 d6fed1a5c367c5aa5dac02abdff7a3f732915b93 Build.PL
+SHA1 593ebe034033e3f2ed44b4301459485a70c6c336 Changes
+SHA1 da0b89eff79e9d5128ab28d63e099b840cca39bf LICENSE
+SHA1 efb85867b62f922852a64a8c268669720acd9eb1 MANIFEST
+SHA1 c32bf33a525e53ec467b8825242eb0df362a9c30 META.yml
+SHA1 5172c9080b3819b6dc54d83ded1b494573b47734 Makefile.PL
+SHA1 c783f7e114b9034f982adc59fc40a83329daeffd README
+SHA1 4ee2712901374d04140cf270561589dd86c37b25 dist.ini
+SHA1 cc2b2af3aa4021be2e0bde8b9592479db88e8fa7 lib/Math/BaseCalc.pm
+SHA1 c53f842995fd8e7bbbffff1a7f43d6086a3bd904 t/01_basic_tests.t
+SHA1 d555c130952881de5faacbe7f0def8a5bdb36354 t/02_digit_dash.t
 SHA1 19e797985fada8c25f13ce5f0fb873999c3cbe44 t/99_podcoverage.t
+SHA1 fa45d6e6ab1cd421349dea4ef527bfd5cdc8a09e t/author-critic.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.5 (Darwin)
+Version: GnuPG v1.4.6 (Darwin)
 
-iD8DBQFJcmhhgrvMBLfvlHYRAqHkAJ9hclskp69fTz5syYZYf9O0ICmQ8ACfbQt8
-kHOc3r7ya9VGGZK82tvoqTM=
-=9tPk
+iD8DBQFNab/XgrvMBLfvlHYRApzGAJ4htLzN+HJd4YHok9br3Ok1DCTlDgCcC4Ui
+YoF7kdK1i9i1tbmQFZo2et8=
+=V8eq
 -----END PGP SIGNATURE-----

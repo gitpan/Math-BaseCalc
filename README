@@ -1,92 +1,13 @@
-NAME
-    Math::BaseCalc - Convert numbers between various bases
 
-SYNOPSIS
-      use Math::BaseCalc;
 
-      my $calc = new Math::BaseCalc(digits => [0,1]); #Binary
-      my $bin_string = $calc->to_base(465); # Convert 465 to binary
+This archive contains the distribution Math-BaseCalc,
+version 1.014:
 
-      $calc->digits('oct'); # Octal
-      my $number = $calc->from_base('1574'); # Convert octal 1574 to decimal
+  Convert numbers between various bases
 
-DESCRIPTION
-    This module facilitates the conversion of numbers between various number
-    bases. You may define your own digit sets, or use any of several
-    predefined digit sets.
+This software is copyright (c) 2011 by Ken Williams.
 
-    The to_base() and from_base() methods convert between Perl numbers and
-    strings which represent these numbers in other bases. For instance, if
-    you're using the binary digit set [0,1], $calc->to_base(5) will return
-    the string "101". $calc->from_base("101") will return the number 5.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
-    To convert between, say, base 7 and base 36, use the 2-step process of
-    first converting to a Perl number, then to the desired base for the
-    result:
-
-     $calc7  = new Math::BaseCalc(digits=>[0..6]);
-     $calc36 = new Math::BaseCalc(digits=>[0..9,'a'..'z'];
-
-     $in_base_36 = $calc36->to_base( $calc7->from_base('3506') );
-
-    If you just need to handle regular octal & hexdecimal strings, you
-    probably don't need this module. See the sprintf(), oct(), and hex()
-    Perl functions.
-
-METHODS
-    * new Math::BaseCalc
-    * new Math::BaseCalc(digits=>...)
-        Create a new base calculator. You may specify the digit set to use,
-        by either giving the digits in a list reference (in increasing
-        order, with the 'zero' character first in the list) or by specifying
-        the name of one of the predefined digit sets (see the digit() method
-        below).
-
-    * $calc->to_base(NUMBER)
-        Converts a number to a string representing that number in the
-        associated base.
-
-    * $calc->from_base(STRING)
-        Converts a string representing a number in the associated base to a
-        Perl integer. The behavior when fed strings with characters not in
-        $calc's digit set is currently undefined.
-
-    * $calc->digits
-    * $calc->digits(...)
-        Get/set the current digit set of the calculator. With no arguments,
-        simply returns a list of the characters that make up the current
-        digit set. To change the current digit set, pass a list reference
-        containing the new digits, or the name of a predefined digit set.
-        Currently the predefined digit sets are:
-
-               bin => [0,1],
-               hex => [0..9,'a'..'f'],
-               HEX => [0..9,'A'..'F'],
-               oct => [0..7],
-               64  => ['A'..'Z','a'..'z',0..9,'+','/'],
-               62  => [0..9,'a'..'z','A'..'Z'],
-
-         Examples:
-          $calc->digits('bin');
-          $calc->digits([0..7]);
-          $calc->digits([qw(w a l d o)]);
-
-        If any of your "digits" has more than one character, the behavior is
-        currently undefined.
-
-QUESTIONS
-    The '64' digit set is meant to be useful for Base64 encoding. I took it
-    from the MIME::Base64.pm module. Does it look right? It's sure in a
-    strange order.
-
-AUTHOR
-    Ken Williams, ken@forum.swarthmore.edu
-
-COPYRIGHT
-    This is free software in the colloquial nice-guy sense of the word.
-    Copyright (c) 1999, Ken Williams. You may redistribute and/or modify it
-    under the same terms as Perl itself.
-
-SEE ALSO
-    perl(1).
 

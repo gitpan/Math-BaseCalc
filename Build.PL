@@ -1,24 +1,37 @@
 
-use Module::Build;
+use strict;
+use warnings;
+
+use Module::Build 0.3601;
 
 
-my $build = Module::Build->new
-  (
-   module_name => 'Math::BaseCalc',
-   license => 'perl',
-   build_requires => {
-		      'Test::More' => 0,
-		     },
-   create_makefile_pl => 'traditional',
-   create_readme => 1,
-   sign => 1,
-   meta_merge =>
-     { resources =>
-       {
-	homepage   => 'http://code.google.com/p/perl-math-basecalc',
-	repository => 'http://perl-math-basecalc.googlecode.com/svn',
-       },
-     },
-  );
+my %module_build_args = (
+  'build_requires' => {
+    'Module::Build' => '0.3601',
+    'Test::More' => '0'
+  },
+  'configure_requires' => {
+    'ExtUtils::MakeMaker' => '6.31',
+    'Module::Build' => '0.3601'
+  },
+  'dist_abstract' => 'Convert numbers between various bases',
+  'dist_author' => [
+    'Ken Williams <kwilliams@cpan.org>'
+  ],
+  'dist_name' => 'Math-BaseCalc',
+  'dist_version' => '1.014',
+  'license' => 'perl',
+  'module_name' => 'Math::BaseCalc',
+  'recommends' => {},
+  'recursive_test_files' => 1,
+  'requires' => {
+    'Carp' => '0',
+    'vars' => '0'
+  },
+  'script_files' => []
+);
+
+
+my $build = Module::Build->new(%module_build_args);
 
 $build->create_build_script;
