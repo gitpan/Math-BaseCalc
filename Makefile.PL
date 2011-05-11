@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   'ABSTRACT' => 'Convert numbers between various bases',
   'AUTHOR' => 'Ken Williams <kwilliams@cpan.org>',
   'BUILD_REQUIRES' => {
+    'Config' => '0',
     'Module::Build' => '0.3601',
     'Test::More' => '0'
   },
@@ -25,9 +26,10 @@ my %WriteMakefileArgs = (
   'NAME' => 'Math::BaseCalc',
   'PREREQ_PM' => {
     'Carp' => '0',
+    'integer' => '0',
     'vars' => '0'
   },
-  'VERSION' => '1.014',
+  'VERSION' => '1.015',
   'test' => {
     'TESTS' => 't/*.t'
   }

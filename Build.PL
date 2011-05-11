@@ -7,6 +7,7 @@ use Module::Build 0.3601;
 
 my %module_build_args = (
   'build_requires' => {
+    'Config' => '0',
     'Module::Build' => '0.3601',
     'Test::More' => '0'
   },
@@ -19,13 +20,14 @@ my %module_build_args = (
     'Ken Williams <kwilliams@cpan.org>'
   ],
   'dist_name' => 'Math-BaseCalc',
-  'dist_version' => '1.014',
+  'dist_version' => '1.015',
   'license' => 'perl',
   'module_name' => 'Math::BaseCalc',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
     'Carp' => '0',
+    'integer' => '0',
     'vars' => '0'
   },
   'script_files' => []
