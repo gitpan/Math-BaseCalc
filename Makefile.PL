@@ -4,7 +4,7 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -17,7 +17,7 @@ my %WriteMakefileArgs = (
     'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31',
+    'ExtUtils::MakeMaker' => '6.30',
     'Module::Build' => '0.3601'
   },
   'DISTNAME' => 'Math-BaseCalc',
@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'integer' => '0',
     'vars' => '0'
   },
-  'VERSION' => '1.015',
+  'VERSION' => '1.016',
   'test' => {
     'TESTS' => 't/*.t'
   }

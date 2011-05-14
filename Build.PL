@@ -12,7 +12,7 @@ my %module_build_args = (
     'Test::More' => '0'
   },
   'configure_requires' => {
-    'ExtUtils::MakeMaker' => '6.31',
+    'ExtUtils::MakeMaker' => '6.30',
     'Module::Build' => '0.3601'
   },
   'dist_abstract' => 'Convert numbers between various bases',
@@ -20,7 +20,7 @@ my %module_build_args = (
     'Ken Williams <kwilliams@cpan.org>'
   ],
   'dist_name' => 'Math-BaseCalc',
-  'dist_version' => '1.015',
+  'dist_version' => '1.016',
   'license' => 'perl',
   'module_name' => 'Math::BaseCalc',
   'recommends' => {},
